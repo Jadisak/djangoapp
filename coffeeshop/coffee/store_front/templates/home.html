@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <section class="max-w-4xl mx-auto pt-12">
+        <h1 class="md:text-6xl sm:text-4xl md:text-left text-2xl text-center font-extralight text-yellow-500 py-3">feel good at brave café pub...</h1>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 md:px-0 px-4 gap-4 py-6">
+            {% for Front in Front %}
+                <div class="col-span-1 drop-shadow-[0px_0px_5px_rgba(30,30,30,0.30)]">
+                    <div class="rounded-t-2xl overflow-hidden">
+                        <div class="h-72 hover:scale-110 duration-500">
+                            <img alt="content" class="object-cover object-center h-full w-full" src="{{ Front.image }}">
+                        </div>
+                    </div>
+                    <div class="px-4 bg-teal-50 rounded-b-2xl">
+                        <p class="text-lg font-[400] text-amber-600 leading-snug pt-3 pb-2 w-5/6">{{ Front.name }} </p>
+                        <div class="inline-flex gap-1 justify-between items-center h-fit w-full text-base pt-2 pb-4 border-t border-orange-400">
+                            <a href="/" class="text-xs font-[500]">
+                                    <p class="px-2 text-white rounded-md border border-rose-600 bg-orange-400 hover:bg-rose-600 duration-500 pt-[6px] h-7">
+                                        Add to Cart</p>
+                            </a>
+                            <p class="text-gray-600 text-2xl text-right font-[500] pt-[2px] h-9">
+                            <span class="text-amber-600 font-normal text-lg">$ </span> {{ Front.price }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div>
+    </section>
+
+{% endblock %}

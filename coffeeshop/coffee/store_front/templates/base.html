@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Coffee Bean Studio</title>
+</head>
+    <body class="w-full backdrop-opacity-70 backdrop-blur-lg bg-center bg-cover bg-[url('https://images.unsplash.com/photo-1567752588693-ad10a647c5a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2660&q=80')]">
+        
+            {% include 'nav.html' %}
+                {% block content %}
+
+                {% endblock %}
+            {% include 'footer.html' %}
+        
+    </body>
+</html>
